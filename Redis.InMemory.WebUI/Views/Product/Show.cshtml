@@ -1,6 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Show";
+    Product product = ViewBag.Cache_Product as Product;
 }
 
 <h1>@ViewBag.Cache_Zaman</h1>
+<h2>@ViewBag.Cache_Callback</h2>
 
+
+
+<h1>@product.Id, @product.Name, @product.Price</h1>
