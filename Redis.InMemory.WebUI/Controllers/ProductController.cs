@@ -15,6 +15,13 @@ namespace Redis.InMemory.WebUI.Controllers
 
         public IActionResult Index()
         {
+            _memoryCache.Set<string>("zaman", DateTime.Now.ToString());
+            return View();
+        }
+
+        public IActionResult Show()
+        {
+            ViewBag.Cache_Zaman=_memoryCache.Get<string>("zaman");
             return View();
         }
     }
